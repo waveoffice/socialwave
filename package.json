@@ -1,0 +1,45 @@
+{
+  "name": "socialwave",
+  "version": "0.0.1",
+  "description": "Trabalho de conclusão de curso do grupo Wave para a FIT - Faculdade Impacta de Tecnologia. Esta aplicação tem como objetivo demonstrar, através de técnicas computacionais, o uso da mineração de dados na web para fins de agrupamento de informações e enriquecimento de dados visando melhorar a captação de informações para um determinado usuário.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SocialWave",
+    "Wave",
+    "Mineração",
+    "Dados"
+  ],
+  "author": "Alexandre Hellis <alexanrehellis@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.14.1",
+    "connect-flash": "^0.1.1",
+    "consign": "^0.1.2",
+    "cookie-parser": "^1.4.0",
+    "debug": "^2.2.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-load": "^1.1.15",
+    "express-session": "^1.11.3",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.1.10",
+    "mongoose-findorcreate": "^0.1.2",
+    "morgan": "^1.6.1",
+    "node-tweet-stream": "^1.8.3",
+    "passport": "^0.2.2",
+    "passport-facebook": "^2.0.0",
+    "passport-github2": "^0.1.9",
+    "passport-google": "",
+    "passport-google-oauth": "",
+    "passport-linkedin": "^1.0.0",
+    "passport-local": "",
+    "passport-twitter": "",
+    "serve-favicon": "~2.3.0",
+    "socket.io": "^1.3.7",
+    "socket.mvc": "^0.2.0"
+  }
+}

@@ -1,0 +1,61 @@
+  <div class="qv rc aog alu">
+    <div class="qx" style="background-image: url(images/instagram_8.jpg);"></div>
+    <div class="qw dj">
+    <a href="/perfil"><img class="aoh" src="<%= user.photo %>" width="100 "></a> 
+    <h5 class="qy"><a class="aku" href="/perfil"><%= user.username %></a></h5>
+    <p>Você ainda não cadastrou uma descrição. <a href="/perfil">Editar</a></p>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h2><strong>Conecte-se </strong>as suas redes</h2>
+      </div>
+      
+      <div class="panel-body">
+        <p>Conectando suas redes sociais você amplia a sua onda e ajuda o Wave a segmentar ainda mais seus resultados de pesquisa.</p>
+          <ul class="list-group list-unstyled">
+              <li class="list-group-item">
+                <strong>Facebook</strong>
+                <% if(social.indexOf('facebook') != -1){ %>
+                  <a href="/disconnect/facebook" class="btn btn-danger btn-xs pull-right">Desconectar</a>
+                <% }else{ %>
+                  <a href="/connect/facebook" class="btn btn-primary btn-xs pull-right">Conectar</a>
+                <% } %>
+              </li>
+
+              <li class="list-group-item">
+                <strong>Twitter</strong>
+                <% if(social.indexOf('twitter') != -1){ %>
+                  <a href="/disconnect/twitter" class="btn btn-danger btn-xs pull-right">Desconectar</a>
+                <% }else{ %>
+                  <a href="/connect/twitter" class="btn btn-primary btn-xs pull-right">Conectar</a>
+                <% } %>
+              </li>
+              
+              <li class="list-group-item">
+                <strong>Google</strong>
+                <% if(social.indexOf('google') != -1){ %>
+                  <a href="/disconnect/google" class="btn btn-danger btn-xs pull-right">Desconectar</a>
+                <% }else{ %>
+                  <a href="/connect/google" class="btn btn-primary btn-xs pull-right">Conectar</a>
+                <% } %>
+              </li>
+
+              <li class="list-group-item">
+                <strong>Linkedin</strong>
+                <% if(social.indexOf('linkedin') != -1){ %>
+                  <a href="/disconnect/linkedin" class="btn btn-danger btn-xs pull-right">Desconectar</a>
+                <% }else{ %>
+                  <a href="/connect/linkedin" class="btn btn-primary btn-xs pull-right">Conectar</a>
+                <% } %>
+              </li>
+            
+          </ul>
+      </div>
+
+    </div>
+  </div>
+</div>

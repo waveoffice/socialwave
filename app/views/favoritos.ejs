@@ -1,0 +1,79 @@
+<% include header %>
+    
+    <div class="gn"><!--[ INICIO DA COLUNA LEFT ]-->
+
+      <!-- #################################################################[ SIDEBAR-LEFT ] -->
+          <% include sidebar-left %>
+      <!-- #################################################################[ SIDEBAR-LEFT ] -->
+
+    </div><!--[ FIM DA COLUNA LEFT ]-->
+
+    <div class="gz"><!--[ INICIO DA COLUNA MAIN ]-->
+      
+      <ul class="ca qo anx">
+      <!-- ################################################################[ POSTAGEM SIMPLES ]-->
+        <% favorites.forEach(function(favorite, index){ %>
+        <li class="qf b aml">
+            <div class="row">
+              <div class="col-md-12 text-right">
+                <a href="/favoritos/delete/<%= favorite._id %>" title="Apagar" class="btn btn-default btn-xs">
+                  <i class="fa fa-trash-o"></i></a>
+              </div>
+            </div>
+            <a class="qj" href="#">
+            <img
+              class="qh cu"
+              src="images/avatar-dhg.jpg">
+          </a>
+          <div class="qg">
+            <div class="aoc">
+              <div class="qn">
+                <small class="eg dp">1 min</small>
+                <h5><strong><%= favorite.username %></strong></h5>
+              </div>
+              <p>
+               <%= favorite.content %>
+              </p>
+            </div>
+          </div>
+        </li>
+        <% }) %>
+      </ul>
+    </div><!--[ FIM DA COLUNA MAIN ]-->
+
+
+    <div class="gn"><!--[ INICIO DA COLUNA RIGHT ]-->
+      
+      <!-- ##################################################################[ BOX-NOTIFICAÇÃO ]-->
+        <% include box/box-notificacao %>
+      <!-- ##################################################################[ BOX-NOTIFICAÇÃO ] -->
+      
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2><strong>Sugestão </strong>de onda</h2>
+            </div>
+            
+            <div class="panel-body">
+              <div data-grid="images" data-target-height="150">
+                <img class="qh" data-action="zoom" src="images/enem.jpg">
+              </div>
+                
+              <p><strong>Enem 2015/2016</strong> Saiba mais sobre o Exame Nacional do Ensino Médio!</p>
+              <button class="cg ts fx">Eu quero!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ##################################################################[ BOX-SOLICITA-AMIZADE ]-->
+        <% include box/box-solicita-amizade %>
+      <!-- ##################################################################[ BOX-SOLICITA-AMIZADE ] -->
+
+    </div><!--[ FIM DA COLUNA RIGHT ]-->
+
+<!-- #################################################################[ FOOTER ] -->
+  <% include footer %>
+<!-- #################################################################[ FOOTER ] -->
+

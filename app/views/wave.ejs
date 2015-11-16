@@ -1,0 +1,64 @@
+<% include header %>
+    
+    <div class="gn"><!--[ INICIO DA COLUNA LEFT ]-->
+
+      <!-- #################################################################[ SIDEBAR-LEFT ] -->
+          <% include sidebar-left %>
+      <!-- #################################################################[ SIDEBAR-LEFT ] -->
+
+    </div><!--[ FIM DA COLUNA LEFT ]-->
+
+    <div class="col-md-9"><!--[ INICIO DA COLUNA MAIN ]-->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2><i class="fa fa-bar-chart-o"></i>Wave</h2>
+              <div class="panel-actions">
+                <a href="/wave" class="btn-close"><i class="fa fa-refresh"></i></a>
+              </div>
+               <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#web" aria-controls="web" role="tab" data-toggle="tab">Web</a></li>
+                  <li role="presentation">
+                    <a href="#portais" aria-controls="portais" role="tab" data-toggle="tab">Portais</a></li>
+                  <li role="presentation">
+                    <a href="#redes-sociais" aria-controls="redes-sociais" role="tab" data-toggle="tab">Redes Sociais</a></li>
+              </ul>
+            </div>
+
+            <div class="panel-body">
+              <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="web">Web</div>
+                  <div role="tabpanel" class="tab-pane fade" id="portais">Portais</div>
+                  <div role="tabpanel" class="tab-pane fade" id="redes-sociais">
+                    <div id="msgcount"></div>
+                    
+                    <div id="tweetsList">
+                      <ul class="tweets"></ul>
+                    </div>
+                      <script>
+                     
+                      $(function() {
+                        var socket = io.connect();
+                        var list = $('ul.tweets');
+                        var counter = 1;
+                       
+                        socket.on('tweet', function (tweet) {
+                            $('#msgcount').text("Messages: "+ counter++);
+                            var a = '<li><img src="'+tweet.user.profile_image_url_https+'"> <strong>'+tweet.user.screen_name +':</strong><br><span class="text"> '+ tweet.text+'</span></li>'
+                            list.prepend(a)
+                    
+                        });
+                      });
+                    </script>  
+                  </div>
+              </div>
+                
+            </div>
+              
+          </div>
+    </div><!--[ FIM DA COLUNA MAIN ]-->
+
+<!-- #################################################################[ FOOTER ] -->
+  <% include footer %>
+<!-- #################################################################[ FOOTER ] -->
+
