@@ -1,2 +1,2 @@
 # socialwave
-TCC Faculdade Impacta Técnogia - Social Wave
+TCC Faculdade Impacta Tecnologia - Social Wave
